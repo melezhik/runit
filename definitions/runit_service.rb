@@ -173,11 +173,11 @@ EOF
     end
   end
 
-  if params[:active_directory] == node[:runit][:service_dir]
-    link "/etc/init.d/#{params[:name]}" do
-      to node[:runit][:sv_bin]
-    end
-  end
+  #if params[:active_directory] == node[:runit][:service_dir]
+    #link "/etc/init.d/#{params[:name]}" do
+     # to node[:runit][:sv_bin]
+    #end
+  #end
 
   unless node[:platform] == "gentoo"
     link service_dir_name do
